@@ -6,18 +6,18 @@ module.exports = {
     data: new SlashCommandBuilder()
         .setName("play")
         .setDescription("load songs from youtube")
-        .addSubCommand((subcommand) => 
+        .addSubcommand((subcommand) => 
             subcommand.setName("song")
             .setDescription("loads single song from url")
             .addStringOption((option) => option.setName("url").setDescription("the songs url").setRequired(true))
         )
-        .addSubCommand((subcommand) => 
+        .addSubcommand((subcommand) => 
             subcommand
                 .setName("playlist")
                 .setDescription("loads a playlist of songs from a url")
                 .addStringOption((option) => option.setName("url").setDescription("the playlist's url").setRequired(true))
         )
-        .addSubCommand((subcommand) => 
+        .addSubcommand((subcommand) => 
             subcommand
                 .setName("search").setDescription("searches for song based off of provided key words")
                 .addStringOption((option) => 
