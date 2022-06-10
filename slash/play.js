@@ -3,7 +3,7 @@ const { MessageEmbed } = require ("discord.js")
 const { QueryType } = require ("discord-player")
 
 module.exports = {
-    data: new SlashVommandBuilder()
+    data: new SlashCommandBuilder()
         .setName("play")
         .setDescription("load songs from youtube")
         .addSubCommand((subcommand) => 

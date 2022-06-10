@@ -1,7 +1,7 @@
 const Discord = require("discord.js")
 const dotenv = require("dotenv")
 const { REST } = require("@discordjs/rest")
-const { Routes } = require("@discord-api-types/v9")
+const { Routes } = require("discord-api-types/v9")
 const fs = require("fs")
 const { Player } = require("discord-player")
 
@@ -33,7 +33,7 @@ let commands = []
 
 const slashFiles = fs.readdirSync("./slash").filter(file => file.endsWith(".js"))
 
-for(const files of slashFiles){
+for(const file of slashFiles){
     const slashcmd = require(`./slash/${file}`)
     client.slashcommands.set(slashcmd.data.name, slashcmd)
     if (LOAD_SLASH) commands.push(slashcmd.data.toJSON())
