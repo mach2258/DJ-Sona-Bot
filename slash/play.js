@@ -29,8 +29,6 @@ module.exports = {
             return interaction.editReply(" Please be in a voice channel before requesting music!")
 
         const queue = await client.player.createQueue(interaction.guild)
-        console.log(queue)
-        console.log(queue.connection)
         if (!queue.connection) await queue.connect(interaction.member.voice.channel)
 
         let embed = new MessageEmbed()

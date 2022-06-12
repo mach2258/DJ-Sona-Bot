@@ -32,15 +32,12 @@ client.player = new Player(client, {
 let commands = []
 
 const slashFiles = fs.readdirSync("./slash").filter(file => file.endsWith(".js"))
-console.log(slashFiles)
 
 for (const file of slashFiles) {
     const slashcmd = require(`./slash/${file}`)
     client.slashcommands.set(slashcmd.data.name, slashcmd)
     if (LOAD_SLASH) commands.push(slashcmd.data.toJSON())
 }
-
-console.log(commands)
 
 if (LOAD_SLASH) {
     const rest = new REST({ version: "9" }).setToken(TOKEN)
