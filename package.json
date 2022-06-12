@@ -24,6 +24,8 @@
     "@discordjs/voice": "^0.10.0",
     "discord-player": "^5.2.2",
     "discord.js": "^13.8.0",
-    "dotenv": "^16.0.1"
+    "dotenv": "^16.0.1",
+    "ffmpeg-static": "^4.4.1",
+    "ytdl-core": "^4.11.0"
   }
 }
